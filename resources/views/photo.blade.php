@@ -2,50 +2,48 @@
 @section('title', 'ZNAPPLAY')
 
 @section('content')
+
     <div class="img-full " id="video-container">
         <div class="video-overlay"></div>
         <div class="video-content">
             <div class="inner">
-                <h1>Welcome to <em>Znapplay</em></h1>
-
-                <p>Homepage with full-width image gallery</p>
-                <div class="scroll-icon">
-                    <a class="scrollTo" data-scrollTo="portfolio" href="#"><img src="{{ url('/img/scroll-icon.png') }}"></a>
-                </div>
+                <h1>Znapplay</h1>
+                @foreach ($photos as $photo)
+                    <h2 style="color: aliceblue" >{{ $photo->album_name }}</h2>
+                    @break
+                @endforeach
+                
             </div>
+
         </div>
 
-        <img src="img/Pb-1.jpg">
-
+        <img src="{{ url('/img/Pb-1.jpg') }}">
     </div>
-
 
     <div class="full-screen-portfolio bg-custom" id="portfolio">
         <div class="container-fluid ">
 
-            @foreach ($al_photo as $al_photos)
+            @foreach ($al_photo->photos as $photo)
                 <div class="col-md-4 col-sm-6">
                     <div class="portfolio-item">
-                        <a href="{{ url('/albums/' . $al_photos->id) }}" data-lightbox="image-1">
+                        <a href="{{ asset('storage/' . $photo->photo_name) }}" data-fancybox="gallery">
                             <div class="thumb">
                                 <div class="hover-effect">
                                     <div class="hover-content">
-                                        <h1>{{ $al_photos->album_name }}</h1>
-                                        <p>Click to view album</p>
+                                        <p>Click to view photo</p>
                                     </div>
                                 </div>
-                                <div class="image  fix-size">
-                                    <img src="{{ asset('storage/' . $al_photos->photo_name) }}">
+                                <div class="image fix-size">
+                                    <img src="{{ asset('storage/' . $photo->photo_name) }}">
                                 </div>
-
                             </div>
                         </a>
                     </div>
                 </div>
             @endforeach
 
-
-
         </div>
     </div>
+
+
 @endsection
