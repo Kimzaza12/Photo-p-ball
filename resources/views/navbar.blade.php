@@ -22,7 +22,8 @@
     @vite('resources/js/plugins.js')
     @vite('resources/js/bootstrap.js')
 
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
@@ -55,12 +56,19 @@
 </head>
 
 <body>
-    <nav>
-        <div class="logo">
-            <a href="/admin123">Znapplay</a>
+    <nav class="px-5 justify-content-between   d-flex ">
+        <div class="d-flex justify-content-center align-items-center ">
+            <div class="logo1 ">
+                <a href="/" class="fix-logo-main "><img src="{{ url('img/CZP-1.png') }}"></a>
+            </div>
         </div>
-        <div class="menu-icon">
-            <span></span>
+        <div>
+            <div class=" align-content-center d-flex logo">
+                <a href="/" class="fw-bold fs-3 ">Home</a>
+            </div>
+            <div class=" align-content-center d-flex logo">
+                <a href="/admin123" class="fw-bold fs-3 ">Admin</a>
+            </div>
         </div>
     </nav>
 
@@ -84,6 +92,12 @@
         <button id="modBtn" class="modal-btn"> <img src="{{ url('img/contact-icon.png') }}">
         </button>
     </div>
+
+
+
+
+
+
 
     <!-- Modal -->
     <div id="modal" class="modal">
@@ -132,23 +146,5 @@
 
 
 
-    <section class="overlay-menu">
-        <div class="container">
-            <div class="row">
-                <div class="main-menu">
-                    <ul>
-                        <li>
-                            <a href="/">Home</a>
-                        </li>
 
-                        <li>
-                            <a href="#">About Us</a>
-                        </li>
-
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 </body>

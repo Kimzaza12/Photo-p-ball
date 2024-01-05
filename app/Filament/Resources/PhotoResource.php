@@ -27,6 +27,9 @@ use Filament\Forms\Components\Select;
 class PhotoResource extends Resource
 {
     protected static ?string $model = Photo::class;
+    protected static ?string $model2 = Photo::class;
+
+    
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -45,13 +48,12 @@ class PhotoResource extends Resource
 
                 Select::make('album_id')
                     ->required()
-                    ->label('
-                Album order')
-                ->options(Album::all()->pluck('id', 'id'))
+                    ->label('Album order')
+                    ->options(Album::all()->pluck('album_name', 'id'))
                     ->searchable(),
 
 
-
+                    
             ])->columns(1);
     }
 
@@ -62,7 +64,7 @@ class PhotoResource extends Resource
                 //
                 ImageColumn::make('photo_name')
                     ->disk('public'),
-                Tables\Columns\TextColumn::make('album_id'),
+                Tables\Columns\TextColumn::make('album_id')
             ])
             ->filters([
                 //
