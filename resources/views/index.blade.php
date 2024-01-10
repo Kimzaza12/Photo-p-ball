@@ -19,9 +19,22 @@
 
     </div>
 
+    <div class="full-screen-portfolio bg-custom" id="portfolio">
+        <div class="container-fluid ">
+ 
+            <h1 class="text-white d-flex justify-content-center py-5" style="font-size: 50px" >OUR SERVICE</h1>
+
+    
+
+
+
+        </div>
+    </div>
 
     <div class="full-screen-portfolio bg-custom" id="portfolio">
         <div class="container-fluid ">
+ 
+            <h1 class="text-white d-flex justify-content-center py-5" style="font-size: 50px" >PORTFOLIO</h1>
 
             @foreach ($al_photo as $al_photos)
                 <div class="col-md-4 col-sm-6">
@@ -48,4 +61,17 @@
 
         </div>
     </div>
+
+    <div class="full-screen-portfolio bg-custom" id="portfolio">
+        <div class="container-fluid ">
+ 
+            <h1 class="text-white d-flex justify-content-center py-5" style="font-size: 50px" >CONTACT US</h1>
+
+    
+
+
+
+        </div>
+    </div>
+
 @endsection
