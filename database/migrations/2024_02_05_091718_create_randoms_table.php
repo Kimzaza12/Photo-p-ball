@@ -11,23 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('photos', function (Blueprint $table) {
+        Schema::create('randoms', function (Blueprint $table) {
             $table->id();
-            $table->string('photo_name');
-            $table->unsignedBigInteger('album_id'); 
-            $table->foreign('album_id')->references('id')->on('albums')->onDelete('cascade');
+            $table->string('Random_name');
+            $table->string('Random_img');
             $table->timestamps();
         });
     }
-    
+
     /**
      * Reverse the migrations.
      */
-
     public function down(): void
     {
-        Schema::dropIfExists('photos');
+        Schema::dropIfExists('randoms');
     }
-
-
 };

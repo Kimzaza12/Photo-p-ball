@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Photo;
 use Illuminate\Http\Request;
 use App\Models\Album;
+use App\Models\Random;
+
 
 class HomeController extends Controller
 {
@@ -27,5 +29,13 @@ class HomeController extends Controller
         $photos = Photo::where(['album_id' => $id])->get(); 
 
         return view('photo', compact('al_photo', 'photos'));
+    }
+
+
+    public function random()
+    {
+        $Random = Random::orderby('id', 'desc')->get();
+        return view('random', compact('Random'));
+
     }
 }

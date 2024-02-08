@@ -11,33 +11,52 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 
-    @vite('resources/css/bootstrap.min.css')
-    @vite('resources/css/bootstrap-theme.min.css')
     @vite('resources/css/fontAwesome.css')
     @vite('resources/css/light-box.css')
     @vite('resources/css/templatemo-style.css')
     @vite('resources/css/app.css')
     @vite('resources/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')
     @vite('resources/js/main.js')
+    @vite('resources/js/app.js')
     @vite('resources/js/plugins.js')
     @vite('resources/js/bootstrap.js')
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+
+        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap" rel="stylesheet">
 
     <!-- Include Fancybox CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
 
-    <!-- Include jQuery (if you haven't already) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    
+    <script src="https://cdn.rawgit.com/fancyapps/fancybox/master/dist/jquery.fancybox.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Include jQuery (if you haven't already) -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- Include Fancybox JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+
 
     <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
@@ -56,42 +75,112 @@
 </head>
 
 <body>
-    <nav class="px-5 justify-content-between   d-flex ">
-        <div class="d-flex justify-content-center align-items-center ">
-            <div class="logo1 ">
-                <a href="/" class="fix-logo-main "><img src="{{ url('img/CZP-1.png') }}"></a>
+    <nav class="navbar bg-dark  fixed-top">
+        <div class="container-fluid">
+
+            <div class="d-lg-block d-none ">
+                <div class="d-flex justify-content-center align-items-center ">
+                    <div class="logo1 mx-5 ">
+                        <a href="/" class="fix-logo-main "><img src="{{ url('img/CZP-1.png') }}"></a>
+
+
+                    </div>
+
+                    <a class="nav-link text-white me-4" href="/#video-container">Home</a>
+                    <a class="nav-link text-white me-4" href="/#ABOUT">ABOUT</a>
+                    <a class="nav-link text-white me-4" href="/#SERVICE">SERVICE</a>
+                    <a class="nav-link text-white me-4" href="/#PORTFOLIO">PORTFOLIO</a>
+                    <a class="nav-link text-white me-4" href="/random">E-SPORT</a>
+
+                </div>
             </div>
-        </div>
-        <div>
-            <div class=" align-content-center d-flex logo">
-                <a href="/" class="fw-bold fs-3 ">Home</a>
+
+
+            <div class="d-lg-none d-block ">
+                <div class="d-flex justify-content-center align-items-center ">
+                    <div class="logo1  ">
+                        <a href="/" class="fix-logo-main "><img src="{{ url('img/CZP-1.png') }}"></a>
+
+
+                    </div>
+
+                </div>
             </div>
-            <div class=" align-content-center d-flex logo">
-                <a href="/admin123" class="fw-bold fs-3 ">Admin</a>
+
+
+            <div>
+                <button class="navbar-toggler d-lg-none d-block  bg-body-secondary  " type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon  "></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header bg-dark  ">
+                        <h2 class="offcanvas-title text-white " id="offcanvasNavbarLabel">Menu</h2>
+                        <button type="button" class="btn-close bg-danger   " data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body bg-dark">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+
+ 
+
+                            <li class="nav-item">
+                                <a class="nav-link text-white " href="/#video-container">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/#ABOUT">ABOUT</a>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/#SERVICE">SERVICE</a>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/#PORTFOLIO">PORTFOLIO</a>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/random">E-SPORT</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
             </div>
+
+
+
         </div>
     </nav>
+
+
 
 
     @yield('content')
 
 
     <footer>
-        <div class="container-fluid">
-            <div class="col-md-12">
-                <p>Copyright &copy; 2024 Znapplay std.
 
-                    | Designed by TemplateMo | Develop more by STC </p>
-            </div>
+        <div class="container-fluid p-2">
+
+            <p class="m-0 p-0">Copyright &copy; 2024 Znapplay std.
+
+                | Designed by TemplateMo | Develop more by STC </p>
         </div>
+
+
+
     </footer>
 
 
     <!-- Modal button -->
-    <div class="popup-icon">
-        <button id="modBtn" class="modal-btn"> <img src="{{ url('img/contact-icon.png') }}">
-        </button>
-    </div>
 
 
 
@@ -99,50 +188,7 @@
 
 
 
-    <!-- Modal -->
-    <div id="modal" class="modal">
-        <!-- Modal Content -->
-        <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h3 class="header-title">Say hello to <em>Highway</em></h3>
-                <div class="close-btn"><img src="img/close_contact.png" alt=""> <img
-                        src="{{ url('img/close_contact.png') }}"></div>
-            </div>
-            <!-- Modal Body -->
-            <div class="modal-body">
-                <div class="col-md-6 col-md-offset-3">
-                    <form id="contact" action="" method="post">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <fieldset>
-                                    <input name="name" type="text" class="form-control" id="name"
-                                        placeholder="Your name..." required="">
-                                </fieldset>
-                            </div>
-                            <div class="col-md-12">
-                                <fieldset>
-                                    <input name="email" type="email" class="form-control" id="email"
-                                        placeholder="Your email..." required="">
-                                </fieldset>
-                            </div>
-                            <div class="col-md-12">
-                                <fieldset>
-                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..."
-                                        required=""></textarea>
-                                </fieldset>
-                            </div>
-                            <div class="col-md-12">
-                                <fieldset>
-                                    <button type="submit" id="form-submit" class="btn">Send Message Now</button>
-                                </fieldset>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
 
 

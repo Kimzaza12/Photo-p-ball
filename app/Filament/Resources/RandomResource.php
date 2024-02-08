@@ -2,10 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\PhotoResource\Pages;
-use App\Filament\Resources\PhotoResource\RelationManagers;
-use App\Models\Album;
-use App\Models\Photo;
+use App\Filament\Resources\RandomResource\Pages;
+use App\Filament\Resources\RandomResource\RelationManagers;
+use App\Models\Random;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -14,22 +13,14 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-
 use Filament\Tables\Columns\TextInputColumn;
 use Filament\Tables\Columns\ImageColumn;
 
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\TextInput;
 
-use Filament\Forms\Components\Select;
-
-
-class PhotoResource extends Resource
+class RandomResource extends Resource
 {
-    protected static ?string $model = Photo::class;
-    protected static ?string $model2 = Photo::class;
-
-    
+    protected static ?string $model = Random::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -38,23 +29,19 @@ class PhotoResource extends Resource
         return $form
             ->schema([
                 //
-
-                FileUpload::make('photo_name')
+                Forms\Components\TextInput::make('Random_name')->required(),
+                FileUpload::make('Random_img')
                     ->image()
-                    ->imageEditor()
-                    ->imageEditorMode(2)
-                    ->disk('public')
-                    ->directory('photo_p'),
-
-                Select::make('album_id')
-                    ->required()
-                    ->label('Album order')
-                    ->options(Album::all()->pluck('album_name', 'id'))
-                    ->searchable(),
-
-
                     
-            ])->columns(1);
+                    ->imageEditor()
+                    ->imageEditorAspectRatios([
+                        '16:9',
+                        '4:3',
+                        '1:1',
+                    ])
+                    ->disk('public')
+                    ->directory('Random'),
+            ]);
     }
 
     public static function table(Table $table): Table
@@ -62,9 +49,15 @@ class PhotoResource extends Resource
         return $table
             ->columns([
                 //
-                ImageColumn::make('photo_name')
-                    ->disk('public'),
-                Tables\Columns\TextColumn::make('album_id')
+                Tables\Columns\TextColumn::make('Random_name')
+                ->searchable(),
+
+            ImageColumn::make('Random_img')
+                ->width(300)
+                ->height(200)
+                ->searchable()
+                ->disk('public'),
+
             ])
             ->filters([
                 //
@@ -89,9 +82,9 @@ class PhotoResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListPhotos::route('/'),
-            'create' => Pages\CreatePhoto::route('/create'),
-            'edit' => Pages\EditPhoto::route('/{record}/edit'),
+            'index' => Pages\ListRandoms::route('/'),
+            'create' => Pages\CreateRandom::route('/create'),
+            'edit' => Pages\EditRandom::route('/{record}/edit'),
         ];
     }
 }

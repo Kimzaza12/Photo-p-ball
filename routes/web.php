@@ -20,3 +20,5 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 
 
 Route::get('/albums/{id}', [HomeController::class, 'home'])->name('show');
+
+Route::get('/random', [HomeController::class, 'random'])->name('random');

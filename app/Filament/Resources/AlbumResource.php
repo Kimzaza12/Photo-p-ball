@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\AlbumResource\Pages;
 use App\Filament\Resources\AlbumResource\RelationManagers;
+use App\Filament\Resources\AlbumResource\RelationManagers\PhotoRelationManager;
 use App\Models\Album;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -31,11 +32,15 @@ class AlbumResource extends Resource
                 //
                 Forms\Components\TextInput::make('album_name')->required(),
                 FileUpload::make('photo_name')
-                ->image()
-                ->imageEditor()
-                ->imageEditorMode(2)
-                ->disk('public')
-                ->directory('album_p'),
+                    ->image()
+                    ->imageEditor()
+                    ->imageEditorAspectRatios([
+                        '16:9',
+                        '4:3',
+                        '1:1',
+                    ])
+                    ->disk('public')
+                    ->directory('album_p'),
             ])->columns(1);
     }
 
@@ -44,10 +49,14 @@ class AlbumResource extends Resource
         return $table
             ->columns([
                 //
-                TextInputColumn::make('id'),
-                TextInputColumn::make('album_name'),
+                Tables\Columns\TextColumn::make('album_name')
+                    ->searchable(),
+
                 ImageColumn::make('photo_name')
-                ->disk('public'),
+                    ->width(300)
+                    ->height(200)
+                    ->searchable()
+                    ->disk('public'),
 
             ])
             ->filters([
@@ -66,7 +75,7 @@ class AlbumResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            PhotoRelationManager::class,
         ];
     }
 
