@@ -49,7 +49,7 @@
 
 
 .bg-game {
-    background-image: url('/resources/images/game_map/bg.jpg');
+    background-image: url('/storage/resources/images/game_map/bg.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
