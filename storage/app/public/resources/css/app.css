@@ -1,0 +1,113 @@
+
+
+
+.img-full img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+@media (min-width: 768px) {
+    .fix-size img {
+        width: 100%;
+        height: 47vh;
+    }
+}
+
+
+
+.fix-img-al {
+ width: 100%;
+ height: 300px;
+
+}
+
+.fix-img-al img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover; 
+   
+   }
+
+
+
+.full-size-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+
+.bg-custom{
+    background-color: rgb(21, 17, 17);
+}
+
+
+.bg-game {
+    background-image: url('/resources/images/game_map/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center; /* แนวตั้งตรงกลาง */
+    align-items: center; /* แนวนอนตรงกลาง */
+    filter: none; 
+}
+
+
+.bg-black1{
+    background-color:black
+}
+
+.fix-logo-main img{
+    width: 70%;
+}
+
+.bg-white2{
+    background-color:rgb(219, 20, 20)
+
+}
+
+.logo1{
+    width: 65px;
+}
+
+.bg-1{
+    background-image: url('/resources/images/bg-1.png');
+    background-repeat: no-repeat; /* ไม่ต่อกัน */
+    background-size: cover; /* ขยายภาพให้เต็มพื้นที่ของ div */
+}
+
+
+.icon-photo img{
+    width: 140px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.center img {
+    display: flex;
+    justify-content: center;
+}
+
+
+.not-selected {
+    filter: grayscale(100%); /* เปลี่ยนเป็นสีเทา */
+    opacity: 0.3;   
+    
+}
+
+#randomImageContainer img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    filter: none; 
+    opacity: 1;
+
+}
+
