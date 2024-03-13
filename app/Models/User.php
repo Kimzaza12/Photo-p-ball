@@ -9,20 +9,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-
-
+use Filament\Panel;
 
 class User extends Authenticatable implements FilamentUser
 {
-
-    
-    public function canAccessFilament(): bool
-    {
-        return str_ends_with($this->email, '@yourdomain.com') && $this->hasVerifiedEmail();
-    }
-
-
-
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
@@ -31,6 +21,10 @@ class User extends Authenticatable implements FilamentUser
      * @var array<int, string>
      */
 
+     public function canAccessPanel(Panel $panel): bool
+     {
+         return str_ends_with($this->email, '@yourdomain.com') && $this->hasVerifiedEmail();
+     }
 
     protected $fillable = [
         'name',
