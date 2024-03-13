@@ -10,7 +10,6 @@ export default defineConfig({
                 'resources/js/main.js',
                 'resources/js/plugins.js',
                 'resources/js/bootstrap.js',
-                'resources/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js',
         ],
             refresh: true,
         }),
