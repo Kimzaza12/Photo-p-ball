@@ -23,10 +23,10 @@
 
 
  
-    @vite('resources/js/main.js')
     @vite('resources/js/app.js')
+    {{-- @vite('resources/js/main.js')
     @vite('resources/js/plugins.js')
-    @vite('resources/js/bootstrap.js')
+    @vite('resources/js/bootstrap.js') --}}
 
 
     <link rel="stylesheet" href="/storage/resources/css/fontAwesome.css">
