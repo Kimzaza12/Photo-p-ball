@@ -11,15 +11,21 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 
-    @vite('resources/css/fontAwesome.css')
-    @vite('resources/css/light-box.css')
-    @vite('resources/css/templatemo-style.css')
-    @vite('resources/css/app.css')
-    @vite('resources/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')
-    @vite('resources/js/main.js')
-    @vite('resources/js/app.js')
-    @vite('resources/js/plugins.js')
-    @vite('resources/js/bootstrap.js')
+
+    <link rel="stylesheet" href="/storage/resources/css/fontAwesome.css">
+    <link rel="stylesheet" href="/storage/resources/css/light-box.css">
+    <link rel="stylesheet" href="/storager/esources/css/templatemo-style.css">
+    <link rel="stylesheet" href="/storage/resources/css/app.css">
+    <link rel="stylesheet" href="/storage/resources/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js">
+    <link rel="stylesheet" href="/storage/resources/js/main.js">
+    <link rel="stylesheet" href="/storage/resources/js/app.js">
+    <link rel="stylesheet" href="/storage/resources/js/plugins.js">
+    <link rel="stylesheet" href="/storage/resources/js/bootstrap.js">
+
+
+
+
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
