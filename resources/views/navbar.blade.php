@@ -26,7 +26,7 @@
 
 
 
-        
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,13 +37,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
-    
+
     <script src="https://cdn.rawgit.com/fancyapps/fancybox/master/dist/jquery.fancybox.min.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <!-- Include jQuery (if you haven't already) -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- Include Fancybox JS -->
@@ -72,6 +72,7 @@
 
 
     <title>@yield('title')</title>
+    
 </head>
 
 <body>
@@ -109,8 +110,9 @@
 
 
             <div>
-                <button class="navbar-toggler d-lg-none d-block  bg-body-secondary  " type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <button class="navbar-toggler d-lg-none d-block  bg-body-secondary  " type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon  "></span>
                 </button>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
@@ -124,7 +126,7 @@
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
 
- 
+
 
                             <li class="nav-item">
                                 <a class="nav-link text-white " href="/#video-container">Home</a>

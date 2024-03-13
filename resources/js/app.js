@@ -6,6 +6,7 @@ import.meta.glob([
 
   document.addEventListener('DOMContentLoaded', function () {
     var randomButton = document.getElementById('randomButton');
+    var photohid = document.getElementById('photohid');
     var portfolioItems = document.querySelectorAll('.portfolio-item');
     var resultModal = new bootstrap.Modal(document.getElementById('resultModal'));
     var isRandomizing = false; // เพิ่มตัวแปรเพื่อตรวจสอบว่ากำลังทำการสุ่มหรือไม่
@@ -45,17 +46,17 @@ import.meta.glob([
         // ตรวจสอบว่ากำลังทำการสุ่มหรือไม่
         if (!isRandomizing) {
             isRandomizing = true; // กำหนด isRandomizing เป็น true เพื่อป้องกันการกดซ้ำ
-
+    
             var animationDuration = 5000; // 5 วินาที
             var interval = 100; // อัพเดททุก 150 มิลลิวินาที
             var frames = Math.ceil(animationDuration / interval);
             var currentFrame = 0;
-
+    
             var animationInterval = setInterval(function () {
                 if (currentFrame < frames) {
                     // สุ่มภาพ
                     var randomIndex = Math.floor(Math.random() * portfolioItems.length);
-
+                
                     portfolioItems.forEach(function (item, index) {
                         if (index === randomIndex) {
                             item.querySelector('img').classList.remove('not-selected');
@@ -63,14 +64,36 @@ import.meta.glob([
                             item.querySelector('img').classList.add('not-selected');
                         }
                     });
-
+                
                     currentFrame++;
+                
+                    // ยกเลิกการซ่อน portfolioItems เมื่อกดปุ่มใหม่
+                    portfolioItems.forEach(function (item) {
+                        item.style.display = 'block'; // แสดงไอเท็มทั้งหมด
+                        randomImageContainer.innerHTML = ''; // เคลียร์เนื้อหาเก่า (ถ้ามี)
+
+                    });
+
+                    function showRandomImage() {
+                        // ทำงานเกี่ยวกับการแสดงภาพสุ่ม
+                    
+                        // ซ่อนภาพที่แสดง
+                        resultModal.style.display = 'none';
+                    }
+                
                 } else {
                     clearInterval(animationInterval);
+                
+                    // ซ่อน portfolioItems เมื่อแสดงผลลัพธ์จากการสุ่ม
+                    portfolioItems.forEach(function (item) {
+                        item.style.display = 'none';
+                        
+                    });
 
+                    
+                
                     // แสดง Modal เมื่อแสดงผลลัพธ์จากการสุ่ม
                     showRandomImage();
-                    resultModal.show();
                 }
             }, interval);
         }

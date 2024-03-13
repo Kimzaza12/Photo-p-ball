@@ -18,7 +18,6 @@
             </div>
 
         </div>
-
         <img src="{{ Vite::asset('resources/images/Pb-1.jpg') }}">
 
     </div>
