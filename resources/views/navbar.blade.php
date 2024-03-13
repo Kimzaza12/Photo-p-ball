@@ -24,7 +24,7 @@
 
     <link rel="stylesheet" href="/storage/resources/css/fontAwesome.css">
     <link rel="stylesheet" href="/storage/resources/css/light-box.css">
-    <link rel="stylesheet" href="/storage/esources/css/templatemo-style.css">
+    <link rel="stylesheet" href="/storage/resources/css/templatemo-style.css">
     <link rel="stylesheet" href="/storage/resources/css/app.css">
     <link rel="stylesheet" href="/storage/resources/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js">
     <link rel="stylesheet" href="/storage/resources/js/main.js">
