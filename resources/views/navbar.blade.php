@@ -22,15 +22,21 @@
     @vite('resources/js/bootstrap.js') --}}
 
 
+ 
+    @vite('resources/js/app.js')
+ 
+
+
     <link rel="stylesheet" href="/storage/resources/css/fontAwesome.css">
     <link rel="stylesheet" href="/storage/resources/css/light-box.css">
     <link rel="stylesheet" href="/storage/resources/css/templatemo-style.css">
     <link rel="stylesheet" href="/storage/resources/css/app.css">
-    <link rel="stylesheet" href="/storage/resources/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js">
+
+    {{-- <link rel="stylesheet" href="/storage/resources/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js">
     <link rel="stylesheet" href="/storage/resources/js/main.js">
     <link rel="stylesheet" href="/storage/resources/js/app.js">
     <link rel="stylesheet" href="/storage/resources/js/plugins.js">
-    <link rel="stylesheet" href="/storage/resources/js/bootstrap.js">
+    <link rel="stylesheet" href="/storage/resources/js/bootstrap.js"> --}}
 
 
 
@@ -83,8 +89,15 @@
 
     <script src="js/vendor/bootstrap.min.js"></script>
 
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+
+{{-- 
+    <script src="resources/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="resources/js/main.js"></script>
+    <script src="resources/js/app.js"></script>
+    <script src="resources/js/plugins.js"></script>
+    <script src="resources/js/bootstrap.js"></script>
+     --}}
+
 
 
     <title>@yield('title')</title>
@@ -199,10 +212,6 @@
 
 
     <!-- Modal button -->
-
-
-
-
 
 
 
