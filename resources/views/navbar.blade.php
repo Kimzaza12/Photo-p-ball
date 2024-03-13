@@ -23,8 +23,11 @@
 
 
  
+    @vite('resources/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')
+    @vite('resources/js/main.js')
     @vite('resources/js/app.js')
- 
+    @vite('resources/js/plugins.js')
+    @vite('resources/js/bootstrap.js')
 
 
     <link rel="stylesheet" href="/storage/resources/css/fontAwesome.css">
