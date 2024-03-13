@@ -27,6 +27,10 @@ class Admin123PanelProvider extends PanelProvider
             ->id('admin123')
             ->path('admin123')
             ->login()
+            ->registration()
+            ->passwordReset()
+            ->emailVerification()
+            ->profile()
             ->colors([
                 'primary' => Color::Amber,
             ])
