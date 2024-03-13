@@ -8,5 +8,20 @@
     "file": "assets/app-ddee773b.js",
     "isEntry": true,
     "src": "resources/js/app.js"
+  },
+  "resources/js/main.js": {
+    "file": "assets/main-abcdefg.js", 
+    "isEntry": true,
+    "src": "resources/js/main.js"
+  },
+  "resources/js/plugins.js": {
+    "file": "assets/plugins-123456.js", 
+    "isEntry": true,
+    "src": "resources/js/plugins.js"
+  },
+  "resources/js/bootstrap.js": {
+    "file": "assets/bootstrap-987654.js", 
+    "isEntry": true,
+    "src": "resources/js/bootstrap.js"
   }
 }
